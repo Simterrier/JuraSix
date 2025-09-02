@@ -36,6 +36,21 @@
       content="https://simterrier.github.io/JuraSix/assets/logo.png"
     />
 
+    <!-- Content-Security-Policy (bonnes pratiques Lighthouse) -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="
+        default-src 'self';
+        img-src 'self' https: data:;
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+        font-src 'self' https://fonts.gstatic.com data:;
+        script-src 'self';
+        connect-src 'self';
+        frame-ancestors 'none';
+        upgrade-insecure-requests;
+      "
+    />
+
     <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&display=swap"
@@ -69,6 +84,7 @@
       }
     </script>
   </head>
+
   <body>
     <header>
       <div class="logo">
@@ -102,42 +118,66 @@
         <div class="gallerie">
           <ul>
             <li>
-              <a href="./assets/war1.jpg" target="_blank"
+              <a
+                href="./assets/war1.jpg"
+                target="_blank"
+                rel="noopener noreferrer"
                 ><img src="./assets/war1.jpg" alt="Photo Warhammer 1"
               /></a>
             </li>
             <li>
-              <a href="./assets/war2.jpg" target="_blank"
+              <a
+                href="./assets/war2.jpg"
+                target="_blank"
+                rel="noopener noreferrer"
                 ><img src="./assets/war2.jpg" alt="Photo Warhammer 2"
               /></a>
             </li>
             <li>
-              <a href="./assets/war3.jpg" target="_blank"
+              <a
+                href="./assets/war3.jpg"
+                target="_blank"
+                rel="noopener noreferrer"
                 ><img src="./assets/war3.jpg" alt="Photo Warhammer 3"
               /></a>
             </li>
             <li>
-              <a href="./assets/war4.jpg" target="_blank"
+              <a
+                href="./assets/war4.jpg"
+                target="_blank"
+                rel="noopener noreferrer"
                 ><img src="./assets/war4.jpg" alt="Photo Warhammer 4"
               /></a>
             </li>
             <li>
-              <a href="./assets/war5.jpg" target="_blank"
+              <a
+                href="./assets/war5.jpg"
+                target="_blank"
+                rel="noopener noreferrer"
                 ><img src="./assets/war5.jpg" alt="Photo Warhammer 5"
               /></a>
             </li>
             <li>
-              <a href="./assets/war6.jpg" target="_blank"
+              <a
+                href="./assets/war6.jpg"
+                target="_blank"
+                rel="noopener noreferrer"
                 ><img src="./assets/war6.jpg" alt="Photo Warhammer 6"
               /></a>
             </li>
             <li>
-              <a href="./assets/war7.jpg" target="_blank"
+              <a
+                href="./assets/war7.jpg"
+                target="_blank"
+                rel="noopener noreferrer"
                 ><img src="./assets/war7.jpg" alt="Photo Warhammer 7"
               /></a>
             </li>
             <li>
-              <a href="./assets/war8.jpg" target="_blank"
+              <a
+                href="./assets/war8.jpg"
+                target="_blank"
+                rel="noopener noreferrer"
                 ><img src="./assets/war8.jpg" alt="Photo Warhammer 8"
               /></a>
             </li>
@@ -224,6 +264,7 @@
         <a
           href="https://www.facebook.com/profile.php?id=61563990519967&locale=fr_FR"
           target="_blank"
+          rel="noopener noreferrer"
         >
           <img src="./assets/fb.png" alt="Facebook JuraSix" />
         </a>
