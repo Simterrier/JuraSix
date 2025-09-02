@@ -1,10 +1,11 @@
-/* Reset */
+/* ===== RESET ===== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+img { display: block; max-width: 100%; height: auto; }
 
 body {
   font-family: 'Montserrat', sans-serif;
@@ -13,7 +14,10 @@ body {
   line-height: 1.6;
 }
 
-
+/* ===== TITRES (fix Lighthouse) ===== */
+:where(article, aside, nav, section) h1 { font-size: 2.5rem; font-weight: 900; }
+:where(article, aside, nav, section) h2 { font-size: 2rem;   font-weight: 800; }
+:where(article, aside, nav, section) h3 { font-size: 1.5rem; font-weight: 700; }
 
 /* ===== HEADER ===== */
 header {
@@ -24,14 +28,13 @@ header {
   align-items: center;
 }
 
-.logo img {
-  width: 180px;
-}
+.logo img { width: 180px; }
 
 /* ===== PRESENTATION ===== */
 .presentation {
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-              url("./assets/jurasix.webp") center/cover no-repeat;
+  background:
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url("./assets/jurasix.webp") center/cover no-repeat;
   text-align: center;
   padding: 100px 20px;
 }
@@ -43,11 +46,7 @@ header {
   margin-bottom: 20px;
 }
 
-.presentation p {
-  font-size: 24px;
-  font-style: italic;
-  margin-bottom: 20px;
-}
+.presentation p { font-size: 24px; font-style: italic; margin-bottom: 20px; }
 
 .presentation span {
   max-width: 800px;
@@ -56,21 +55,17 @@ header {
   font-size: 18px;
 }
 
-/* ===== GALLERIE ===== */
-.club {
-  margin-top: 50px;
-  padding: 20px;
-}
+/* ===== CLUB / GALLERIE ===== */
+.club { margin-top: 50px; padding: 20px; }
 
 .gallerie ul {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 15px;
-}
-
-.gallerie li {
   list-style: none;
 }
+
+.gallerie li { list-style: none; }
 
 .gallerie img {
   width: 100%;
@@ -81,9 +76,7 @@ header {
   transition: transform 0.3s ease;
 }
 
-.gallerie img:hover {
-  transform: scale(1.05);
-}
+.gallerie img:hover { transform: scale(1.05); }
 
 /* ===== ORGANIGRAMME ===== */
 .intro {
@@ -99,6 +92,7 @@ header {
   flex-direction: column;
   align-items: center;
   gap: 40px;
+  list-style: none;
 }
 
 .organigramme li {
@@ -126,10 +120,7 @@ header {
 }
 
 /* ===== CONTACT ===== */
-.Contacts {
-  margin-top: 60px;
-  padding: 20px;
-}
+.Contacts { margin-top: 60px; padding: 20px; }
 
 .Contacts h2 {
   text-align: center;
@@ -146,9 +137,7 @@ header {
   gap: 20px;
 }
 
-label {
-  font-weight: 600;
-}
+label { font-weight: 600; }
 
 input, textarea {
   width: 100%;
@@ -161,10 +150,7 @@ input, textarea {
   font-size: 16px;
 }
 
-textarea {
-  height: 150px;
-  resize: none;
-}
+textarea { height: 150px; resize: none; }
 
 button {
   padding: 12px 30px;
@@ -176,11 +162,7 @@ button {
   transition: background 0.3s ease, transform 0.2s ease;
 }
 
-button:hover {
-  background-color: #FFD700;
-  color: #000;
-  transform: scale(1.05);
-}
+button:hover { background-color: #FFD700; color: #000; transform: scale(1.05); }
 
 /* ===== FOOTER ===== */
 footer {
@@ -195,12 +177,10 @@ footer {
   justify-content: center;
   gap: 80px;
   margin-bottom: 20px;
+  list-style: none;
 }
 
-.apropos li {
-  list-style: none;
-  font-size: 18px;
-}
+.apropos li { list-style: none; font-size: 18px; }
 
 .apropos img {
   width: 40px;
@@ -208,16 +188,11 @@ footer {
   transition: transform 0.3s ease;
 }
 
-.apropos img:hover {
-  transform: scale(1.2);
-}
+.apropos img:hover { transform: scale(1.2); }
 
-.apropos a { 
-    color: #fff;
-}
+.apropos a { color: #fff; text-decoration: none; }
 
-
-/* --- Grand écran (1440px et +) --- */
+/* ====== MEDIA QUERIES ====== */
 /* --- Grand écran (1440px et +) --- */
 @media screen and (min-width: 1440px) {
   /* Pas de contrainte sur le body => plein écran */
@@ -231,12 +206,10 @@ footer {
   .organigramme ul,
   .apropos ul {
     max-width: 1280px;
-    margin: 0 auto;         /* centre le contenu */
+    margin: 0 auto; /* centre le contenu */
   }
 
-  .gallerie ul {
-    grid-template-columns: repeat(4, 1fr); /* 4 colonnes fixes */
-  }
+  .gallerie ul { grid-template-columns: repeat(4, 1fr); }
 
   .organigramme ul {
     flex-direction: row;
@@ -259,30 +232,15 @@ footer {
 
 /* --- Mobile (375px et -) --- */
 @media screen and (max-width: 375px) {
-  .presentation {
-    padding: 60px 15px;
-  }
+  .presentation { padding: 60px 15px; }
 
-  .presentation h1 {
-    font-size: 32px;
-  }
+  .presentation h1 { font-size: 32px; }
+  .presentation p  { font-size: 18px; }
+  .presentation span { font-size: 16px; }
 
-  .presentation p {
-    font-size: 18px;
-  }
+  .gallerie ul { grid-template-columns: 1fr; gap: 10px; }
 
-  .presentation span {
-    font-size: 16px;
-  }
-
-  .gallerie ul {
-    grid-template-columns: 1fr; /* 1 colonne */
-    gap: 10px;
-  }
-
-  .organigramme ul {
-    gap: 20px;
-  }
+  .organigramme ul { gap: 20px; }
 
   .organigramme li {
     flex-direction: column;
@@ -291,22 +249,10 @@ footer {
     padding: 15px;
   }
 
-  .organigramme img {
-    width: 100px;
-    height: 100px;
-  }
+  .organigramme img { width: 100px; height: 100px; }
 
-  input,
-  textarea {
-    max-width: 100%;
-  }
+  input, textarea { max-width: 100%; }
+  button { width: 100%; }
 
-  button {
-    width: 100%;
-  }
-
-  .apropos ul {
-    flex-direction: column;
-    gap: 10px;
-  }
+  .apropos ul { flex-direction: column; gap: 10px; }
 }

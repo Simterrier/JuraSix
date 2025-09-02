@@ -36,18 +36,18 @@
       content="https://simterrier.github.io/JuraSix/assets/logo.png"
     />
 
-    <!-- Content-Security-Policy (bonnes pratiques Lighthouse) -->
+    <!-- Content-Security-Policy -->
     <meta
       http-equiv="Content-Security-Policy"
       content="
-    default-src 'self';
-    img-src 'self' https: data:;
-    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-    font-src 'self' https://fonts.gstatic.com data:;
-    script-src 'self';
-    connect-src 'self';
-    upgrade-insecure-requests;
-  "
+        default-src 'self';
+        img-src 'self' https: data:;
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+        font-src 'self' https://fonts.gstatic.com data:;
+        script-src 'self';
+        connect-src 'self';
+        upgrade-insecure-requests;
+      "
     />
 
     <!-- Google Fonts -->
@@ -92,6 +92,7 @@
     </header>
 
     <main>
+      <!-- Présentation = section logique avec titre -->
       <section class="presentation">
         <h1>JuraSix</h1>
         <p>
@@ -113,7 +114,8 @@
         </span>
       </section>
 
-      <section class="club">
+      <!-- Club = simple container sans heading -->
+      <div class="club">
         <div class="gallerie">
           <ul>
             <li>
@@ -206,8 +208,9 @@
             </li>
           </ul>
         </div>
-      </section>
+      </div>
 
+      <!-- Contact = section logique avec heading -->
       <section class="Contacts">
         <h2>Contactez-nous</h2>
         <div class="form">
