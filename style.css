@@ -13,20 +13,7 @@ body {
   line-height: 1.6;
 }
 
-/* ===== TITRES GLOBAUX ===== */
-/* Évite l'avertissement Lighthouse : taille explicite pour titres dans section/article/nav/aside */
-:where(article, aside, nav, section) h1 {
-  font-size: 2.5rem; /* ~40px */
-  font-weight: 900;
-}
-:where(article, aside, nav, section) h2 {
-  font-size: 2rem; /* ~32px */
-  font-weight: 800;
-}
-:where(article, aside, nav, section) h3 {
-  font-size: 1.5rem; /* ~24px */
-  font-weight: 700;
-}
+
 
 /* ===== HEADER ===== */
 header {
