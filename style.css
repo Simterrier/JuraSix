@@ -215,3 +215,98 @@ footer {
 .apropos a { 
     color: #fff;
 }
+
+
+/* --- Grand écran (1440px et +) --- */
+/* --- Grand écran (1440px et +) --- */
+@media screen and (min-width: 1440px) {
+  /* Pas de contrainte sur le body => plein écran */
+  body { max-width: none; margin: 0; }
+
+  .presentation h1 { font-size: 72px; }
+  .presentation span { font-size: 20px; }
+
+  /* Contrainte centrée sur les contenus, pas sur toute la page */
+  .gallerie ul,
+  .organigramme ul,
+  .apropos ul {
+    max-width: 1280px;
+    margin: 0 auto;         /* centre le contenu */
+  }
+
+  .gallerie ul {
+    grid-template-columns: repeat(4, 1fr); /* 4 colonnes fixes */
+  }
+
+  .organigramme ul {
+    flex-direction: row;
+    justify-content: center;
+    gap: 60px;
+  }
+
+  .organigramme li {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
+  /* Formulaire centré mais plein écran autour */
+  .Contacts .formulaire {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+/* --- Mobile (375px et -) --- */
+@media screen and (max-width: 375px) {
+  .presentation {
+    padding: 60px 15px;
+  }
+
+  .presentation h1 {
+    font-size: 32px;
+  }
+
+  .presentation p {
+    font-size: 18px;
+  }
+
+  .presentation span {
+    font-size: 16px;
+  }
+
+  .gallerie ul {
+    grid-template-columns: 1fr; /* 1 colonne */
+    gap: 10px;
+  }
+
+  .organigramme ul {
+    gap: 20px;
+  }
+
+  .organigramme li {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+  }
+
+  .organigramme img {
+    width: 100px;
+    height: 100px;
+  }
+
+  input,
+  textarea {
+    max-width: 100%;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .apropos ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
