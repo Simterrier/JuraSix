@@ -14,23 +14,23 @@ body {
   line-height: 1.6;
 }
 
-/* ===== TITRES (fix Lighthouse) ===== */
+
 :where(article, aside, nav, section) h1 { font-size: 2.5rem; font-weight: 900; }
 :where(article, aside, nav, section) h2 { font-size: 2rem;   font-weight: 800; }
 :where(article, aside, nav, section) h3 { font-size: 1.5rem; font-weight: 700; }
 
-/* ===== HEADER ===== */
+
 header {
   background-color: #1C1C1C;
   padding: 20px;
   display: flex;
-  justify-content: center; /* centre le logo */
+  justify-content: center; 
   align-items: center;
 }
 
 .logo img { width: 180px; }
 
-/* ===== PRESENTATION ===== */
+
 .presentation {
   background:
     linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
@@ -55,7 +55,7 @@ header {
   font-size: 18px;
 }
 
-/* ===== CLUB / GALLERIE ===== */
+
 .club { margin-top: 50px; padding: 20px; }
 
 .gallerie ul {
@@ -78,7 +78,6 @@ header {
 
 .gallerie img:hover { transform: scale(1.05); }
 
-/* ===== ORGANIGRAMME ===== */
 .intro {
   text-align: center;
   margin-top: 60px;
@@ -119,7 +118,7 @@ header {
   object-fit: cover;
 }
 
-/* ===== CONTACT ===== */
+
 .Contacts { margin-top: 60px; padding: 20px; }
 
 .Contacts h2 {
@@ -164,7 +163,7 @@ button {
 
 button:hover { background-color: #FFD700; color: #000; transform: scale(1.05); }
 
-/* ===== FOOTER ===== */
+
 footer {
   background-color: #1C1C1C;
   padding: 20px;
@@ -192,16 +191,14 @@ footer {
 
 .apropos a { color: #fff; text-decoration: none; }
 
-/* ====== MEDIA QUERIES ====== */
-/* --- Grand écran (1440px et +) --- */
 @media screen and (min-width: 1440px) {
-  /* Pas de contrainte sur le body => plein écran */
+  
   body { max-width: none; margin: 0; }
 
   .presentation h1 { font-size: 72px; }
   .presentation span { font-size: 20px; }
 
-  /* Contrainte centrée sur les contenus, pas sur toute la page */
+ 
   .gallerie ul,
   .organigramme ul,
   .apropos ul {
@@ -223,14 +220,13 @@ footer {
     gap: 15px;
   }
 
-  /* Formulaire centré mais plein écran autour */
   .Contacts .formulaire {
     max-width: 600px;
     margin: 0 auto;
   }
 }
 
-/* --- Mobile (375px et -) --- */
+
 @media screen and (max-width: 375px) {
   .presentation { padding: 60px 15px; }
 
