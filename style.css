@@ -1,36 +1,29 @@
 /* ===== RESET ===== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+* { margin: 0; padding: 0; box-sizing: border-box; }
 img { display: block; max-width: 100%; height: auto; }
 
 body {
   font-family: 'Montserrat', sans-serif;
-  background-color: #2E2E2E;
+  background-color: rgb(30,49,63);
   color: #F5F5F5;
   line-height: 1.6;
 }
-
 
 :where(article, aside, nav, section) h1 { font-size: 2.5rem; font-weight: 900; }
 :where(article, aside, nav, section) h2 { font-size: 2rem;   font-weight: 800; }
 :where(article, aside, nav, section) h3 { font-size: 1.5rem; font-weight: 700; }
 
-
+/* ===== HEADER ===== */
 header {
-  background-color: #1C1C1C;
+  background-color: rgb(30,49,63);
   padding: 20px;
   display: flex;
-  justify-content: center; 
+  justify-content: center;
   align-items: center;
 }
-
 .logo img { width: 180px; }
 
-
+/* ===== PRESENTATION ===== */
 .presentation {
   background:
     linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
@@ -38,95 +31,50 @@ header {
   text-align: center;
   padding: 100px 20px;
 }
-
 .presentation h1 {
   font-size: 60px;
   font-weight: 900;
-  color: #FFD700;
+  color: #FF743A;
   margin-bottom: 20px;
 }
-
 .presentation p { font-size: 24px; font-style: italic; margin-bottom: 20px; }
+.presentation span { max-width: 800px; display: block; margin: auto; font-size: 18px; }
 
-.presentation span {
-  max-width: 800px;
-  display: block;
-  margin: auto;
-  font-size: 18px;
-}
-
-
+/* ===== CLUB / GALERIE ===== */
 .club { margin-top: 50px; padding: 20px; }
 
 .gallerie ul {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 15px;
+  gap: 16px;
   list-style: none;
+  padding: 0;
 }
 
-.gallerie li { list-style: none; }
-
-.gallerie img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
+.gallerie li a {
+  display: block;
+  aspect-ratio: 4 / 3;  /* ratio propre, pas d'écrasement */
+  overflow: hidden;
   border-radius: 8px;
-  cursor: pointer;
+}
+
+.gallerie li img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;     /* remplit sans déformer */
   transition: transform 0.3s ease;
+  cursor: pointer;
 }
+.gallerie li img:hover { transform: scale(1.05); }
 
-.gallerie img:hover { transform: scale(1.05); }
-
-.intro {
-  text-align: center;
-  margin-top: 60px;
-  font-size: 28px;
-  font-weight: 600;
-  margin-bottom: 40px;
-}
-
-.organigramme ul {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 40px;
-  list-style: none;
-}
-
-.organigramme li {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  gap: 30px;
-  background: #1C1C1C;
-  padding: 20px;
-  border-radius: 12px;
-}
-
-.organigramme li span {
-  font-size: 20px;
-  text-decoration: underline;
-  color: #FFD700;
-}
-
-.organigramme img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  border: 2px solid #FFD700;
-  object-fit: cover;
-}
-
-
+/* ===== CONTACT ===== */
 .Contacts { margin-top: 60px; padding: 20px; }
-
 .Contacts h2 {
   text-align: center;
   font-size: 32px;
   font-weight: 800;
   margin-bottom: 30px;
-  color: #FFD700;
+  color: #FF743A;
 }
 
 .formulaire {
@@ -154,101 +102,72 @@ textarea { height: 150px; resize: none; }
 button {
   padding: 12px 30px;
   font-size: 16px;
-  background-color: #8B0000;
+  background-color: #FF743A;
   color: #fff;
   border-radius: 30px;
   cursor: pointer;
   transition: background 0.3s ease, transform 0.2s ease;
 }
+button:hover { color: #000; transform: scale(1.05); }
 
-button:hover { background-color: #FFD700; color: #000; transform: scale(1.05); }
-
-
+/* ===== FOOTER ===== */
 footer {
   background-color: #1C1C1C;
   padding: 20px;
-  text-align: center;
   margin-top: 40px;
 }
 
 .apropos ul {
   display: flex;
-  justify-content: center;
-  gap: 80px;
-  margin-bottom: 20px;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
   list-style: none;
 }
 
+.socials { 
+  margin-left: -260px;
+}
 .apropos li { list-style: none; font-size: 18px; }
+
+.apropos .socials {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
 
 .apropos img {
   width: 40px;
-  filter: brightness(0) invert(1); /* logo blanc */
+  filter: brightness(0) invert(1);
   transition: transform 0.3s ease;
 }
-
 .apropos img:hover { transform: scale(1.2); }
 
 .apropos a { color: #fff; text-decoration: none; }
 
+/* ===== DESKTOP ===== */
 @media screen and (min-width: 1440px) {
-  
   body { max-width: none; margin: 0; }
 
   .presentation h1 { font-size: 72px; }
   .presentation span { font-size: 20px; }
 
- 
-  .gallerie ul,
-  .organigramme ul,
-  .apropos ul {
-    max-width: 1280px;
-    margin: 0 auto; /* centre le contenu */
-  }
+  .gallerie ul { max-width: 1280px; margin: 0 auto; grid-template-columns: repeat(4, 1fr); }
 
-  .gallerie ul { grid-template-columns: repeat(4, 1fr); }
-
-  .organigramme ul {
-    flex-direction: row;
-    justify-content: center;
-    gap: 60px;
-  }
-
-  .organigramme li {
-    flex-direction: column;
-    text-align: center;
-    gap: 15px;
-  }
-
-  .Contacts .formulaire {
-    max-width: 600px;
-    margin: 0 auto;
-  }
+  .Contacts .formulaire { max-width: 600px; margin: 0 auto; }
 }
 
-
+/* ===== MOBILE ===== */
 @media screen and (max-width: 375px) {
   .presentation { padding: 60px 15px; }
-
   .presentation h1 { font-size: 32px; }
   .presentation p  { font-size: 18px; }
   .presentation span { font-size: 16px; }
 
   .gallerie ul { grid-template-columns: 1fr; gap: 10px; }
 
-  .organigramme ul { gap: 20px; }
-
-  .organigramme li {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    padding: 15px;
-  }
-
-  .organigramme img { width: 100px; height: 100px; }
-
   input, textarea { max-width: 100%; }
   button { width: 100%; }
 
-  .apropos ul { flex-direction: column; gap: 10px; }
+  .apropos ul { flex-direction: column; gap: 10px; align-items: flex-start; }
 }
